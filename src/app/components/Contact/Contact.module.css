@@ -1,0 +1,102 @@
+.contactBox {
+  background-color: var(--foreground);
+  padding: 0 20px;
+}
+.contactBox p {
+  color: var(--background);
+  padding-top: 10px;
+  font-size: 2rem;
+  padding-bottom: 0.2em;
+}
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+  grid-template-rows: repeat(4, 1fr); /* 4 equal rows */
+  width: 100vw;
+  height: 86vh;
+  padding: 0px 10px;
+}
+.grid :nth-child(1) {
+  justify-content: flex-start;
+}
+.grid :nth-child(2) .item {
+  padding-right: 25%;
+}
+.grid :nth-child(3) {
+  padding-left: 25%;
+}
+.grid :nth-child(4) {
+  justify-content: flex-end;
+}
+.grid li:nth-child(4) span {
+  display: block;
+  text-align: right;
+  width: 100%;
+}
+.item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  color: var(--background);
+  perspective: 1000px;
+}
+
+.item a {
+  color: inherit;
+  text-decoration: none;
+  display: inline-block;
+  transform-origin: center;
+  transform: rotateX(0deg); /* init state */
+  transition: transform 0.3s ease; /* hover transition */
+}
+
+.item a:hover {
+  transform: rotateX(180deg); /* flip */
+}
+
+/*Response design media queries 600x1067*/
+/*phones vertical*/
+@media (max-width: 600px) {
+  .grid {
+    display: block;
+    width: 100%;
+    height: 50vh;
+    padding: 0 0px;
+  }
+  .item {
+    justify-content: flex-start;
+    margin-top: 5vh;
+  }
+  .grid :nth-child(2) .item {
+    padding-right: 0%;
+  }
+  .grid :nth-child(3) {
+    padding-left: 0%;
+  }
+  .grid :nth-child(4) {
+    justify-content: flex-start;
+  }
+  .grid li:nth-child(4) span {
+    display: block;
+    text-align: left;
+    width: 100%;
+  }
+}
+
+/*tablet landscape / larger phones 684x385 684x1216*/
+/* @media (min-width: 601px) and (max-width: 767px) {
+} */
+
+/*tablets and small laptops 880x495 880x1173*/
+/* @media (min-width: 768px) and (max-width: 991px) {
+}
+ */

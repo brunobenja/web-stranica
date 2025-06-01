@@ -1,0 +1,60 @@
+.otherWorkContainer {
+  margin-top: 5em;
+}
+
+.otherWorkTitle {
+  font-size: 4em;
+  font-weight: 300;
+  padding-left: 20px;
+  padding-bottom: 0.2em;
+}
+
+.projectList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.projectItem {
+  position: relative;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--foreground);
+  overflow: hidden;
+}
+
+.projectContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  transition: transform 0.5s ease-in-out;
+  position: relative;
+}
+
+.projectTitle {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-left: 20px;
+  transition: transform 0.5s ease-in-out; /*text transition*/
+}
+
+.projectImage {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-120%, -50%); /*start position*/
+  width: 150px;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  opacity: 0;
+}
+
+.projectItem:hover .projectTitle {
+  transform: translateX(150px);
+}
+
+.projectItem:hover .projectImage {
+  transform: translate(0%, -50%);
+  opacity: 1;
+}

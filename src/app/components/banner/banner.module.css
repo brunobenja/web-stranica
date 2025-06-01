@@ -1,0 +1,78 @@
+.banner {
+  padding: 0 20px 20px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.bannerLeft,
+.bannerRight {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center; /*horizontal center*/
+  align-items: center; /*vertical center*/
+}
+
+.bannerImage {
+  object-fit: contain;
+}
+/*Response design media queries*/
+/*phones vertical*/
+@media (max-width: 600px) {
+  .banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .bannerImage {
+    width: 70%;
+  }
+}
+
+/*tablet landscape / larger phones*/
+@media (min-width: 601px) {
+  .banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .bannerImage {
+    width: 70%;
+  }
+}
+
+/*tablets and small laptops*/
+@media (min-width: 768px) {
+  .banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .bannerImage {
+    width: 70%;
+  }
+}
+
+/*laptops and desktops*/
+@media (min-width: 992px) {
+  .banner {
+    width: 100%;
+  }
+  .bannerLeft,
+  .bannerRight {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .bannerImage {
+    width: 100%;
+  }
+}
